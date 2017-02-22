@@ -12,42 +12,24 @@ import {
   View
 } from 'react-native';
 
-export default class ReactNativeHelloWorld extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
+class Greeting extends Component {
+    render() {
+        return (
+            <Text>Hello {this.props.username}</Text>
+        );
+    }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
 
-AppRegistry.registerComponent('ReactNativeHelloWorld', () => ReactNativeHelloWorld);
+export default class HelloWorldApp extends Component {
+  render() {
+      return (
+      <View style={{alignItems: 'center'}}>
+        <Greeting username="Vinh 1" />
+        <Greeting username="Vinh 2" />
+      </View>
+      );
+    }
+}
+
+AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
