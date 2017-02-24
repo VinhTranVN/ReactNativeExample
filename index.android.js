@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 
 import Login from './feature/login/Login'
+import LayoutExample from './feature/example/LayoutExample'
 
 class Greeting extends Component {
 
@@ -45,7 +46,7 @@ const myColorStyle = StyleSheet.create({
   }
 })
 
-export default class HelloWorldApp extends Component {
+class HelloWorldApp extends Component {
   render() {
       return (
       // <View style={{
@@ -55,7 +56,8 @@ export default class HelloWorldApp extends Component {
       //   <View style={{flex : 1, backgroundColor: '#CCC'}}><Greeting textContent="Hello world!!!" /></View>
       //   <View style={{flex : 1, backgroundColor: '#0F0'}}><Greeting textContent="What the hell!!!" /></View>
       // </View>
-        <Login />
+      //  <LayoutExample  layoutType='2'/>
+      <Login />
       );
     }
 }
