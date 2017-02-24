@@ -38,49 +38,52 @@ export default class Login extends Component {
 
     render() {
         return (
-          <Image
-            source={require('../../images/bg_login.jpg')}
-            style={loginStyles.backgroundApp}>
-            <View style={{flex : 1, flexDirection: 'column', alignItems:'center'}}>
-              <View style={{flex : 1, justifyContent: 'center'}}>
-                  <Image source={require('../../images/icon_login.png')}
-                    style={loginStyles.backgroundImage}/>
-              </View>
-              <View style={{flex : 1, justifyContent: 'flex-start', flexDirection: 'column'}}>
-                <Text>
-                  User Name
-                </Text>
-                <TextInput
-                  style={{height: 40, width: 150}}
-                  placeholder="Input User Name!"
-                  onChangeText={(username) => this.setState({username})}/>
 
-                <Text>Password</Text>
-                <TextInput
-                  style={{height: 40, width: 150}}
-                  placeholder="Input password!"
-                  onChangeText={(password) => this.setState({password})}/>
+            <Image
+                source={require('../../images/bg_login.jpg')}
+                style={loginStyles.backgroundApp}>
+                <View style={{flex : 1, flexDirection: 'column', alignItems:'center'}}>
 
-                <Button
-                  style={{width: 100}}
-                  onPress={this.onButtonLoginPress}
-                  title="Login"
-                  color="#841584"
-                  accessibilityLabel="Learn more about this purple button"/>
+                  <View style={{flex : 1, justifyContent: 'center'}}>
+                      <Image source={require('../../images/icon_login.png')}
+                        style={loginStyles.backgroundImage}/>
+                  </View>
+
+                  <View style={{flex : 1, justifyContent: 'flex-start', flexDirection: 'column'}}>
+                    <Text>
+                      User Name
+                    </Text>
+                    <TextInput
+                      style={{height: 40, width: 150}}
+                      placeholder="Input User Name!"
+                      onChangeText={(username) => this.setState({username})}/>
+
+                    <Text>Password</Text>
+                    <TextInput
+                      style={{height: 40, width: 150}}
+                      placeholder="Input password!"
+                      onChangeText={(password) => this.setState({password})}/>
+
+                    <Button
+                      style={{width: 100}}
+                      onPress={this.onButtonLoginPress}
+                      title="Login"
+                      color="#841584"
+                      accessibilityLabel="Learn more about this purple button"/>
 
 
-                <TouchableNativeFeedback>
-                  <Text>
-                    TouchableNativeFeedback
-                  </Text>
-                </TouchableNativeFeedback>
+                    <TouchableNativeFeedback>
+                      <Text>
+                        TouchableNativeFeedback
+                      </Text>
+                    </TouchableNativeFeedback>
 
-                <Text style={{paddingTop : 10}}>
-                  AAA : {this.state.username}/{this.state.password}
-                </Text>
-              </View>
-            </View>
-          </Image>
+                    <Text style={{paddingTop : 10}}>
+                      AAA : {this.state.username}/{this.state.password}
+                    </Text>
+                  </View>
+                </View>
+            </Image>
 
         );
     }
@@ -90,12 +93,12 @@ export default class Login extends Component {
 let loginStyles = StyleSheet.create({
   backgroundImage: {
     width : 100,
-    height : 100,
-    //resizeMode: 'cover', // or 'stretch'
+    height : 100
   },
 
   backgroundApp: {
       flex:1,
-      resizeMode: 'stretch', // or 'stretch'
+      width: null,
+      height: null
   }
 });
